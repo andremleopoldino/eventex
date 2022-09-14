@@ -1,2 +1,2 @@
 python-3.10.7
-backports.zoneinfo
+backports.zoneinfo==0.2.1
