@@ -1,2 +1,2 @@
-python-3.9
+python-3.10.7
 backports.zoneinfo;python_version<"3.9"
