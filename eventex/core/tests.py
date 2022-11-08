@@ -1,3 +1,4 @@
+
 from django.test import TestCase
 
 
@@ -13,3 +14,6 @@ class HomeTest(TestCase):
         """must use index.html"""
 
         self.assertTemplateUsed(self.response,'index.html')    
+
+
+
