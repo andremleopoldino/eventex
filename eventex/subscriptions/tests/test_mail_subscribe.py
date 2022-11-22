@@ -7,7 +7,7 @@ from eventex.subscriptions.forms import SubscriptionForm
 
 class SubscribePostTest(TestCase):
     def setUp(self):
-        data = dict(name='André Leopoldino', cpf='12345678901', email='andrem01310@gmail.com', phone = '11-98353-9575')
+        data = dict(name='André Leopoldino', cpf='12345678901', email='budapythonico@gmail.com', phone = '11-98353-9575')
         self.response = self.client.post('/inscricao/', data)
         self.mail = mail.outbox[0]
 
@@ -23,13 +23,13 @@ class SubscribePostTest(TestCase):
 
     def test_subscription_email_from(self):
         
-        expect = 'andrem01310@gmail.com'
+        expect = 'budapythonico@gmail.com'
 
         self.assertEqual(expect, self.mail.from_email)
 
     def test_subscription_email_to(self):
         
-        expect = ['andrem01310@gmail.com' , 'andrem01310@gmail.com']
+        expect = ['budapythonico@gmail.com' , 'budapythonico@gmail.com']
 
         self.assertEqual(expect, self.mail.to)
 
@@ -41,7 +41,7 @@ class SubscribePostTest(TestCase):
         contents = [
             'André Leopoldino',
             '12345678901', 
-            'andrem01310@gmail.com',
+            'budapythonico@gmail.com',
             '11-98353-9575'
         ]
         for content in contents:
