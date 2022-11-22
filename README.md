@@ -10,7 +10,8 @@ Sistemas de Eventos
 5. Configure a instância com o .env
 6. Execute os testes.
 
-'''console
+'''
+console
 git clone git@github.com/andremleopoldino/eventex.git wttd
 cd wttd
 python -m venv .wttd
@@ -29,7 +30,8 @@ python manage.py test
 6. Envie o código para o heroku
 
 
-'''console
+'''
+console
 
 heroku create myinstance
 heroku config:push
