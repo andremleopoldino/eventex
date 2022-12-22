@@ -35,7 +35,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
 # Application definition
 
-DEFAULT_FROM_EMAIL = 'budapythonico@gmail.com'
+DEFAULT_FROM_EMAIL = 'andrem01310@gmail.com'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -45,8 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'test_without_migrations',
     'eventex.core',
-    'eventex.subscriptions',
+    'eventex.subscriptions.apps.SubscriptionsConfig',
 
 ]
 
@@ -116,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
